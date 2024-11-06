@@ -51,6 +51,6 @@ class Interval:
 
 def make_interval_list(input: list[list[int]]) -> list[Interval]:
     output = []
-    for (start, end) in input:
+    for start, end in input:
         output.append(Interval(start, end))
     return output

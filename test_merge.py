@@ -38,9 +38,9 @@ def test_interval_has_overlap():
     with_overlap = Interval(4, 7)
     no_overlap = Interval(10, 15)
     contained = Interval(2, 3)
-    assert True == first.has_overlap(with_overlap)
-    assert False == first.has_overlap(no_overlap)
-    assert True == first.has_overlap(contained)
+    assert first.has_overlap(with_overlap)
+    assert first.has_overlap(contained)
+    assert not first.has_overlap(no_overlap)
 
 
 def test_interval_merge():
