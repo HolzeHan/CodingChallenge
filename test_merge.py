@@ -56,6 +56,7 @@ def test_merge_fully_contained_interval():
     assert merge([outer, inner]) == [outer]
 
 
+# assumption: inverse intervals are not allowed
 def test_invalid_interval():
     with pytest.raises(InvalidInterval):
         Interval(3, 1)

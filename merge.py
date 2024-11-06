@@ -35,6 +35,9 @@ class Interval:
         if self.start > self.end:
             raise InvalidInterval
 
+    def __repr__(self) -> str:
+        return f"[{self.start},{self.end}]"
+
     def has_overlap(self, other: Interval) -> bool:
         return not self._has_no_overlap(other)
 
